@@ -3,6 +3,7 @@ using CoreLayer.DTOs;
 using CoreLayer.Models;
 using CoreLayer.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace APILayer.Controllers
 {
@@ -21,6 +22,13 @@ namespace APILayer.Controllers
             _carService = carService;
             _busService = busService;
             _boatService = boatService;
+        }
+        [HttpGet]
+        public async Task<IActionResult> All()
+        {
+            var cars = await _carService.GetAllAsync();
+            var carsDtos = _mapper.Map<List<CarDto>>(cars.ToList());
+            return Ok(carsDtos);
         }
         [HttpGet("GetCarByColor/{id}")]
         public IActionResult GetCarByColor(int id)
@@ -44,7 +52,7 @@ namespace APILayer.Controllers
             return Ok(boatsDtos);
         }
         [HttpPut]
-        public async Task<IActionResult> Update(CarUpdateDto carUpdateDto)
+        public async Task<IActionResult> UpdateAsync(CarUpdateDto carUpdateDto)
         {
             await _carService.UpdateAsync(_mapper.Map<Car>(carUpdateDto));
             return Ok(204);
@@ -55,6 +63,14 @@ namespace APILayer.Controllers
             var car = await _carService.GetByIdAsync(id);
             await _carService.RemoveAsync(car);
             return Ok(204);
+        }
+    
+        [HttpGet("GetCarById/{id}")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            var car = await _carService.GetByIdAsync(id);
+            var carsDto = _mapper.Map<CarDto>(car);
+            return Ok(carsDto);
         }
     }
 }
