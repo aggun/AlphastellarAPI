@@ -12,15 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddAutoMapper(typeof(MapProfile));
-//sql adresninin verilmesi
-builder.Services.AddDbContext<AppDbContext>(x =>
-{
-    x.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), option =>
-    {
-        option.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
-    });
-});
+
 //api servisinin verilmesi
 builder.Services.AddHttpClient<VehicleApiServices>(opt =>
 {
@@ -29,12 +21,7 @@ builder.Services.AddHttpClient<VehicleApiServices>(opt =>
 
 });
 
-
-builder.Host.UseServiceProviderFactory
-    (new AutofacServiceProviderFactory());
-IHostBuilder hostBuilder = builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{1716DBFF-B14E-45B1-8D08-464DD0FC699B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{1716DBFF-B14E-45B1-8D08-464DD0FC699B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{A9F4444E-D3A5-44EC-A232-D82F67A77B8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{A9F4444E-D3A5-44EC-A232-D82F67A77B8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{F76E9B39-B00E-4611-8AE1-F188D3374B95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{F76E9B39-B00E-4611-8AE1-F188D3374B95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APILayer", "APILayer\APILayer.csproj", "{13F1CBE6-7F53-4720-9761-B3F11E1D18CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APILayer", "APILayer\APILayer.csproj", "{13F1CBE6-7F53-4720-9761-B3F11E1D18CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebLayer", "WebLayer\WebLayer.csproj", "{FD33EEB5-93B2-4A64-A02C-61F1F67DD162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{13F1CBE6-7F53-4720-9761-B3F11E1D18CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13F1CBE6-7F53-4720-9761-B3F11E1D18CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13F1CBE6-7F53-4720-9761-B3F11E1D18CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD33EEB5-93B2-4A64-A02C-61F1F67DD162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD33EEB5-93B2-4A64-A02C-61F1F67DD162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD33EEB5-93B2-4A64-A02C-61F1F67DD162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD33EEB5-93B2-4A64-A02C-61F1F67DD162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

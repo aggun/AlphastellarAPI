@@ -2,6 +2,8 @@
 
 namespace WebLayer.Services
 {
+    //Api servislerinin Projeye implemente edilmesi buradan DI ile constructor oluşturularak
+    //controllerde api metotlarına erişilir.
     public class VehicleApiServices
     {
         private readonly HttpClient _httpClient;
