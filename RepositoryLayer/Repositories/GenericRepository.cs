@@ -18,6 +18,10 @@ namespace RepositoryLayer.Repositories
             _context = context;
             _dbSet = _context.Set<T>();
         }
+        public IQueryable<T> GetAll()
+        {
+            return _dbSet.AsNoTracking().AsQueryable();
+        }
         public void Remove(T entity)
         {
             _dbSet.Remove(entity);

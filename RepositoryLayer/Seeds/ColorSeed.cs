@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace RepositoryLayer.Seeds
 {
+    //Proje ilk oluşturulurken test için oluşturulan fake datalar ilk migration ile SQL'e yazılır.
     internal class ColorSeed : IEntityTypeConfiguration<Color>
     {
         public void Configure(EntityTypeBuilder<Color> builder)

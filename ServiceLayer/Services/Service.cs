@@ -1,6 +1,7 @@
 ﻿using CoreLayer.Repositories;
 using CoreLayer.Services;
 using CoreLayer.UnitOfWork;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,10 @@ namespace ServiceLayer.Services
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
+        }
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await _repository.GetAll().ToListAsync();
         }
         public async Task RemoveAsync(T entity)
         {

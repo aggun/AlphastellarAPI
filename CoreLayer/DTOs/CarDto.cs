@@ -8,6 +8,7 @@ namespace CoreLayer.DTOs
 {
     public class CarDto
     {
+        public int Id { get; set; }
         public string Model { get; set; }
         public int ColorId { get; set; }
         public bool wheels { get; set; }
