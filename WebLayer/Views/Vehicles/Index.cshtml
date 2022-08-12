@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model List<CarDto>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Model</td>
+            <td>Color</td>
+            <td>Headlights</td>
+            <td>wheels</td>
+            <td>Open</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Model</td>
+                <td>@item.ColorId</td>
+                <td>@item.Headlights</td>
+                <td>@item.wheels</td>
+                <td>
+                   <a class="btn btn-warning" asp-controller="Vehicles" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                </td>
+                <td>
+                     <a class="btn btn-danger" asp-controller="Vehicles" asp-action="Remove" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+
+
