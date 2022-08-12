@@ -27,7 +27,10 @@ namespace RepositoryLayer.Repositories
         {
             _dbSet.Update(entity);
         }
-
+        public async Task<T> GetByIdAsync(int id)
+        {
+            return await _dbSet.FindAsync(id);
+        }
         public IQueryable<T> where(Expression<Func<T, bool>> expression)
         {
             return _dbSet.Where(expression);

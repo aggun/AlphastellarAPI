@@ -14,10 +14,10 @@ namespace RepositoryLayer.Seeds
         public void Configure(EntityTypeBuilder<Color> builder)
         {
             builder.HasData(
-                new Color { Id = 1, Model = "Black"},
-                new Color { Id = 2, Model = "Blue" },
-                new Color { Id = 3, Model = "White" },
-                new Color { Id = 4, Model = "Red" });
+                new Color { Id = 1, ColorName = "Black"},
+                new Color { Id = 2, ColorName = "Blue" },
+                new Color { Id = 3, ColorName = "White" },
+                new Color { Id = 4, ColorName = "Red" });
         }
     }
 }
