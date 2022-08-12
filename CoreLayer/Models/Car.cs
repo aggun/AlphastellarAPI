@@ -8,7 +8,7 @@ namespace CoreLayer.Models
 {
     public class Car : BaseEntity
     {
-        public bool wheels { get; set; }
+        public bool? wheels { get; set; }
         public int ColorId { get; set; }
         public Color Color { get; set; }
     }

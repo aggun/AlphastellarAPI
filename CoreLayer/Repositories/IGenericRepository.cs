@@ -9,6 +9,7 @@ namespace CoreLayer.Repositories
 {
     public interface IGenericRepository<T> where T : class
     {
+        Task<T> GetByIdAsync(int id);
         IQueryable<T> where(Expression<Func<T, bool>> expression);
         void Update(T entity);
         void Remove(T entity);
